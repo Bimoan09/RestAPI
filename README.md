@@ -7,6 +7,10 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> master
 **clone**
 _git clone_ https://github.com/Bimoan09/RestAPI.git
  
@@ -88,4 +92,7 @@ X-RateLimit-Remaining: 59
 < X-RateLimit-Remaining: 58
 < 
 * Closing connection 0
+<<<<<<< HEAD
+=======
 
+>>>>>>> master
