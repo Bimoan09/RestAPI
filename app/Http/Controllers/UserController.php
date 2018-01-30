@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Transforsmers\UserTransformer;
 class UserController extends Controller
 {
+<<<<<<< HEAD
     public function users(User $pegawai){
 
       $pegawai = $pegawai->all();
@@ -34,4 +35,23 @@ class UserController extends Controller
         User::destroy($id);
         return response()->json();
       }
+=======
+    public function users(User $user){
+
+      $users = $user->all();
+      return fractal()
+            ->collection($users)
+            ->transformWith(new UserTransformer)
+            ->toArray();
+    }
+    public function profileById(User $user, $id){
+
+      $users = $user->find($id);
+      return fractal()
+            ->item($users)
+            ->transformWith(new UserTransformer)
+            ->toArray();
+    }
+
+>>>>>>> f94ca10abcb4f924c27ef2270467ff9eca9c9069
 }
