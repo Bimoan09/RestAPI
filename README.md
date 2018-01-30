@@ -40,7 +40,7 @@ Method **GET**
 * _curl -X GET http://localhost:8000/api/pegawai/1_  => Memanggil data pegawai dengan ID 1
 #HASIL
 {"id":1,"name":"Bimo","email":"bimoan09@gmail.com","department":"Engginer","alamat":"Semarang","created_at":"2018-01-29 09:28:34","updated_at":"2018
-
+---------------------------------------------------------------------------------------------------------------------------
 Method POST
 * curl -i -X POST -H "Content-Type:application/json" http://localhost:8000/api/pegawai -d '{"name":"sasa","email":"sasa@gmail.com","password":"12345","department":"Accounting","alamat":"tasik "}'
 
@@ -55,13 +55,13 @@ Date: Mon, 29 Jan 2018 13:37:59 GMT
 Content-Type: application/json
 X-RateLimit-Limit: 60
 X-RateLimit-Remaining: 57
+*{"name":"sasa","email":"sasa@gmail.com","department":"Accounting","alamat":"tasik","updated_at":"2018-01-29 13:37:59","created_at":"2018-01-29 13:37
+----------------------------------------------------------------------------------------------------------------------------
+**Method PUT**
+* curl -i -X PUT -H "Content-Type:application/json" http://localhost:8000/api/pegawai/3 -d '{"id":2, name":"mudiman","email":"mudiman@gmail.com","password":"12345","department":"Accounting","alamat":"tasik "}'
 
-{"name":"sasa","email":"sasa@gmail.com","department":"Accounting","alamat":"tasik","updated_at":"2018-01-29 13:37:59","created_at":"2018-01-29 13:37
-
-Method PUT
-*curl -i -X PUT -H "Content-Type:application/json" http://localhost:8000/api/pegawai/3 -d '{"id":2, name":"mudiman","email":"mudiman@gmail.com","password":"12345","department":"Accounting","alamat":"tasik "}'
-#Hasil
-HTTP/1.1 200 OK
+* #Hasil
+* HTTP/1.1 200 OK
 Host: localhost:8000
 Date: Mon, 29 Jan 2018 20:43:15 +0700
 Connection: close
@@ -71,6 +71,21 @@ Date: Mon, 29 Jan 2018 13:43:15 GMT
 Content-Type: text/html; charset=UTF-8
 X-RateLimit-Limit: 60
 X-RateLimit-Remaining: 59
+-----------------------------------------------------------------------------------------------------------------------------
+ Methods DELETE
+* curl -v -X DELETE http://localhost:8000/api/pegawai/21 =. Menghapus pegawai dengan ID 21
 
-Methods DELETE
-*curl -v -X DELETE http://localhost:8000/api/pegawai/27
+* HASIL
+* < HTTP/1.1 200 OK
+< Host: localhost:8000
+< Date: Tue, 30 Jan 2018 02:47:30 +0000
+< Connection: close
+< X-Powered-By: PHP/7.1.13-1+ubuntu14.04.1+deb.sury.org+1
+< Cache-Control: no-cache, private
+< Date: Tue, 30 Jan 2018 02:47:30 GMT
+< Content-Type: application/json
+< X-RateLimit-Limit: 60
+< X-RateLimit-Remaining: 58
+< 
+* Closing connection 0
+
